@@ -20,7 +20,7 @@ use bam_api_client::{client::BamApiClient, config::Config};
 #[tokio::main]
 async fn main() {
     // Create a client with default configuration
-    let config = Config::default();
+    let config = Config::custom("https://api.example.com");
     let client = BamApiClient::new(config);
 
     // Fetch all validators
